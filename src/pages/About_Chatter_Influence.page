@@ -20,62 +20,56 @@
 	<div style="float:left; width: 400px; margin-right: 75px">
 		<span class="header">Chatter Influence is:</span>
 		<ul>
-			<li>A configurable method of ranking your most Influential* Chatter users.</li>
-			<li>A private, confidential means of distributing personalized Influence reports to your users. By default, only admins can see everyone's Influence.</li>
-			<li>An easy way to take configurable snapshots of your Chatter data for reporting or warehousing.</li>
+			<li>{!$Label.AConfigurable}</li>
+			<li>{!$Label.APrivate}</li>
+			<li>{!$Label.AnEasyWay}</li>
 		</ul>
 		
 		<span class="header">Admin Setup</span>
 		<ol>
-			<li>Deploy the Chatter Influence custom objects to your users:
+			<li>{!$Label.DeployTheChatterInfluence}:
 				<ul>
-					<li>Influence Snapshot (Read)</li>
-					<li>User Influence (Read)</li>
-					<li>Influence Tracker (Read,Create)</li>
+					<li>{!$Label.InfluenceSnapshot}</li>
+					<li>{!$Label.UserInfluence}</li>
+					<li>{!$Label.InfluenceTracker}</li>
 				</ul>			
 			</li>
-			<li>Deploy only the My Chatter Influence tab to your users - the other tabs are for admins.</li>
+			<li>{!$Label.DeployOnlyTheMyChatter}</li>
 		</ol>
 		
-		<span class="header">Running an Influence Snapshot</span>
+		<span class="header">{!$Label.RunningAnInfluenceSnapshot}</span>
 		<ol>
-			<li>Create a new Influence Snapshot record. Specify the time period of Chatter data to include.</li>
-			<li>Click "Begin Influence Calculation".</li>
-			<li>Optionally, check the "Track Influence Reports" box to track when your users request their influence reports.</li>
-			<li>Check the "active" checkbox when you're ready to release these results to your users. Each user can request his or her score 
-				ONLY from the <span class="admin">newest ACTIVE</span> Influence Snapshot on the "My Chatter Influence" tab.</li>
+			<li>{!$Label.CreateNewInfluenceSnapshot}</li>
+			<li>{!$Label.BeginInfluenceCalculation}</li>
+			<li>{!$Label.TrackInfluenceReports}</li>
+			<li>{!$Label.CheckTheActiveCheckbox} <span class="admin">{!$Label.newestACTIVE}</span> {!$Label.InfluenceSnapshotOnTheTab}</li>
 		</ol>
 		
-		<span class="header">Questions?</span>
-		<p><a href="mailto:jhersh@salesforce.com">Send me an email</a> or post on <a href="http://her.sh/dfchatter" target="_new">my Chatter page</a> in the Dreamforce 2010 app.</p>
-		<p>Chatter Influence is <a href="https://sites.secure.force.com/appexchange/listingDetail?listingId=a0N30000003JGrxEAG" target="_new">free on the Appexchange!</a></p>
-		<p>* Feel free to edit the Influence formula to your liking. The default formula shipping with Chatter Influence takes # of users into account, so Influence scores cannot generally be compared across orgs.</p>
+		<span class="header">{!$Label.Questions}</span>
+		<p><a href="mailto:jhersh@salesforce.com">{!$Label.SendMeAnEmail}</a> {!$Label.OrPostOn} <a href="http://her.sh/dfchatter" target="_new">{!$Label.MyChatterPage}</a> {!$Label.Dreamforce2010app}</p>
+		<p>{!$Label.ChatterInfluenceIs} <a href="https://sites.secure.force.com/appexchange/listingDetail?listingId=a0N30000003JGrxEAG" target="_new">{!$Label.FreeOnTheAppexchange}</a></p>
+		<p>{!$Label.FeelFree_to_edit}</p>
 	</div>
 	
 	<div style="width: 400px; float:left">
-		<span class="header">Chatter Influence app tabs</span>
+		<span class="header">{!$Label.ChatterInfluence_app_tabs}</span>
 		<div id="accordion">
-		    <p><a href="#">About Chatter Influence</a></p>
-		    <div>You're on this tab!</div>
-		    <p><a href="#">My Chatter Influence</a></p>
-		    <div>The main entry point for your users to request their Influence scores from the 
-		    most recent active Influence Snapshot you created. <span class="admin">Deploy this tab to your users.</span><br/><br/> Users can also 
-		    visit this tab to read more about how their Influence score is calculated.</div>
-		    <p><a href="#">Influence Snapshots</a></p>
-		    <div>The main entry point for creating a snapshot, calculating Influence, and viewing tracking and influence data.</div>
+		    <p><a href="#">{!$Label.AboutChatter_Influence}</a></p>
+		    <div>{!$Label.YouareOnThisTab}</div>
+		    <p><a href="#">{!$Label.MyChatter_Influence}</a></p>
+		    <div>{!$Label.SnapshotYouCreated} <span class="admin">{!$Label.DeployThisTabToYourUsers}</span><br/><br/> {!$Label.UsersCanAlsoVisit}</div>
+		    <p><a href="#">{!$Label.Influence_Snapshots}</a></p>
+		    <div>{!$Label.TheMainEntryPoint}</div>
 		</div>
 		<div style="height:20px; clear:both"></div>
-		<span class="header">Chatter Influence custom objects</span>
+		<span class="header">{!$Label.ChatterInfluenceCustomObjects}</span>
 		<div id="accordion2">
-		    <p><a href="#">Influence Snapshot</a></p>
-		    <div>Stores the overall averages, medians, and settings for an individual snapshot. When you run a snapshot, you can specify whether you'd like to include all-time Chatter data
-		    	or only data from the last 1 Year, 6 Months, 3 Months, or 1 Month.<br/><br/>The newest active Snapshot record is the only data set that is distributed to your users on the My Chatter Influence tab.</div>
-		    <p><a href="#">User Influence</a></p>
-		    <div>Stores all the details for a given User in a given Influence Snapshot. By default, this data is private (via the My Chatter Influence tab) to that user and only admins can 
-		    	see everyone's influence.</div>
-		    <p><a href="#">Influence Tracker</a></p>
-		    <div>A tracker object that tracks every time a user requests his or her Influence score on the My Chatter Influence tab. You can enable or disable tracking Influence on the 
-		    	Influence Snapshot record.</div>
+		    <p><a href="#">{!$Label.Influence_Snapshot}</a></p>
+		    <div>{!$Label.StoresTheOverallAverages}<br/><br/>{!$Label.TheNewestctiveSnapshot}</div>
+		    <p><a href="#">{!$Label.User_Influence}</a></p>
+		    <div>{!$Label.StoresallTheDetails}</div>
+		    <p><a href="#">{!$Label.Influence_Tracker}</a></p>
+		    <div>{!$Label.ATrackerObject}</div>
 		</div>
 	</div>
 
